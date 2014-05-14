@@ -1,0 +1,113 @@
+<div class="sheet-2colrow">
+	<div class="sheet-col">
+		<b><label>Name:</label><input type="text" name="attr_character_name" /></b></br />
+		<label>Class:</label><input type="text" name="attr_class" /></br />
+		<label>Race:</label><input type="text" name="attr_race" /></br />
+		<label>Experience Points:</label><input type="number" name="attr_xp" /></br />
+	</div>
+	<div class="sheet-col">
+		<table>
+			<tr><th>Melee Attack Bonus:</th><td><input type="number" name="attr_melee_attack_bonus" /></td></tr>
+			<tr><th>Missile Attack Bonus:</th><td><input type="number" name="attr_missile_attack_bonus" /></td></tr>
+			<tr><th>Magic Attack Bonus:</th><td><input type="number" name="attr_magic_attack_bonus" /></td></tr>
+		</table>
+
+		<h3>Weapons</h3>
+		<fieldset class="repeating_weapons" style="border:0 none;">
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Damage</th>
+					<th>Range</th>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_weapon_name" /></td>
+					<td><input type="number" name="attr_weapon_damage" /></td>
+					<td><input type="number" name="attr_weapon_range" /></td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<h3>Armors</h3>
+		<fieldset class="repeating_armors" style="border:0 none;">
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>AC Bonus</th>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_armor_name" /></td>
+					<td><input type="number" name="attr_armor_bonus" /></td>
+				</tr>
+			</table>
+		</fieldset>
+
+	</div>
+</div>
+
+<div class="sheet-3colrow">
+	<div class="sheet-col">
+		<h3>Stats</h3>
+		<table>
+			<tr>
+				<th></th>
+				<th>Score</th>
+				<th>Modifier</th>
+			</tr>
+			<tr>
+				<th>Strength</th>
+				<td><input type="number" name="attr_strength"></td>
+				<td><input type="number" name="attr_strength_mod" value="(@{strength}-10)/2" disabled="true" /></td>
+			</tr>
+			<tr>
+				<th>Dexterity</th>
+				<td><input type="number" name="attr_dexterity"></td>
+				<td><input type="number" name="attr_dexterity_mod" value="(@{dexterity}-10)/2" disabled="true" /></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Mind</th>
+				<td><input type="number" name="attr_mind"></td>
+				<td><input type="number" name="attr_mind_mod" value="(@{mind}-10)/2" disabled="true" /></td>
+				<td></td>
+			</tr>
+		</table>
+
+		<label>Hit Points:</label><input type="number" name="attr_hp" /><br />
+		<label>Armor Class:</label><input type="number" name="attr_ac" /><br />
+
+		<h3>Skills</h3>
+		<table>
+			<tr>
+				<th>Physical</th>
+				<td><input type="number" name="attr_physical"></td>
+			</tr>
+			<tr>
+				<th>Subterfuge</th>
+				<td><input type="number" name="attr_subterfuge"></td>
+			</tr>
+			<tr>
+				<th>Knowledge</th>
+				<td><input type="number" name="attr_knowledge"></td>
+			</tr>
+			<tr>
+				<th>Communication</th>
+				<td><input type="number" name="attr_communication"></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="sheet-col">
+		<h3>Equipment</h3>
+		<fieldset name="repeating_items" style="border: 0 none;">
+			<input type="text" name="attr_name"/>
+		</fieldset>
+	</div>
+
+	<div class="sheet-col">
+		<h3>Notes</h3>
+		<input type="textarea" name="attr_notes" />
+		<h3>Wealth</h3>
+		<input type="textarea" name="attr_wealth" />
+	</div>
+</div>
